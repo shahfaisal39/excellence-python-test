@@ -1,0 +1,46 @@
+# excellence-python-test
+# Q.1 function of sum of list
+def sum(numbers):
+    total = 0
+    for x in numbers:
+        total += x
+    return total
+print(sum((1,2,3,4)))
+# Q.2 find maximum in dic using by python
+dic={
+   "1": 50,
+   "2": 60
+   "3" : 70
+}
+s=max(dic,key=dic.get)
+a=max(dic.values())
+print(s,':',a)
+# Q.3 Write a python function to the number of maximum consecutive  one’s present in the array. 
+# E.g output for the above array would be 4
+def getMaxLength(arr, n): 
+  
+    # intitialize count 
+    count = 0 
+      
+    # initialize max 
+    result = 0 
+  
+    for i in range(0, n): 
+      
+        if (arr[i] == 0): 
+            count = 0
+  
+        
+        else: 
+              
+            # increase count 
+            count+= 1 
+            result = max(result, count)  
+          
+    return result  
+  
+arr = [0,0,0,1,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,1] 
+n = len(arr)  
+  
+print(getMaxLength(arr, n)) 
+  
